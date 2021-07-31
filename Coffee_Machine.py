@@ -42,9 +42,9 @@ def is_resource_sufficient(order_ingredients):
     return True
 
 
-def process_coins():
-    """Returns the total calculated from coins inserted."""
-    print("Please insert coins.")
+def process_Money():
+    """Returns the total calculated from Money inserted."""
+    print("Please insert Money.")
     total = int(input("How many 10?")) * 10
     total += int(input("how many 20?: ")) * 20
     total += int(input("how many 50: ")) * 50
@@ -86,7 +86,7 @@ while is_on:
     else:
         drink = MENU[choice]
         if is_resource_sufficient(drink["ingredients"]):
-            payment = process_coins()
+            payment = process_Money()
             if is_transaction_successful(payment, drink["cost"]):
                 make_coffee(choice, drink["ingredients"])
 
